@@ -1,0 +1,112 @@
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Box */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;  /* Stack login & signup vertically if both present */
+  gap: 40px;  /* space between forms if both exist */
+}
+
+.login-box, .signup-box {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #718096;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #4a5568;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e0;
+  background-color: #f7fafc;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border: 1.5px solid #3182ce;
+  outline: none;
+}
+
+.login-btn, .signup-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* cool purple gradient */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(118, 75, 162, 0.5);
+  transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.login-btn:hover, .signup-btn:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  box-shadow: 0 10px 20px rgba(118, 75, 162, 0.7);
+  transform: scale(1.05);
+}
+
+.login-btn:active, .signup-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px rgba(118, 75, 162, 0.6);
+}
+
+
+
+.message, .signup-message {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 18px; /* reserve space to avoid layout jump */
+}
